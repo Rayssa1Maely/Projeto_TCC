@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <title>Kanban</title>
+</head>
+<body>
+    <h1>Quadro Kanban</h1>
+    <h2>Olá seja bem vindo(a)!!</h2>
+    
+    <fieldset>
+        <legend>SOBRE O PROJETO</legend>
+        <label>
+            Nome:
+            <textarea id="cabecalho"></textarea>
+        </label>
+
+        <label>
+            Data de início:
+            <input class="data" type="date">
+        </label>
+
+        <label>
+        Data Final:
+        <input class="data" type="date">
+        </label>
+
+    </fieldset>
+    <table id="tabela">
+        <tr id="head">
+            <th style="background-color: yellow; color: black;">A FAZER</th>
+            <th style="background-color: red; color: white;">EM PROGRESSO</th>
+            <th style="background-color: aqua; color: black;">FEITO</th>
+        </tr>
+        <tr id="body">
+            <td style="text-align: center;"><button class="button" onclick="adicionar(0)">ADICIONAR</button></td>
+            <td style="text-align: center;"><button class="button" onclick="adicionar(1)">ADICIONAR</button></td>
+            <td style="text-align: center;"><button class="button" onclick="adicionar(2)">ADICIONAR</button></td>
+        </tr>
+        <tr id="br">
+            <td><div id="d1"></div></td>
+            <td><div id="d2"></div></td>
+            <td><div id="d3"></div></td>
+        </tr>
+    </table>
+    <script src="script.js" defer></script>
+</body>
+</html>
